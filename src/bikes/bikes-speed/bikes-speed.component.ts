@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { bikesinfo } from '../bikes-full-details';
+import { BIKESSPEED } from '../bikes-full-details';
 import { BikesHalfDetails } from '../bikes-half-details';
 import { BikesSpeedLimitComponent } from './bikes-speed-limit/bikes-speed-limit.component';
 @Component({
@@ -15,7 +15,7 @@ export class BikesSpeedComponent implements OnInit {
   @Output()bikesHalfDetailsselected=new EventEmitter<BikesHalfDetails>();
 bikeshalfdetailsselected: any;
   constructor() { 
-    // this.bikesspeed=BIKESSPEED;
+    this.bikesspeed=BIKESSPEED;
   }
 
   ngOnInit() {
