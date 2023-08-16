@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { BikesDetailsComponent } from './bikes-details/bikes-details.component';
+import { BikesHalfDetails } from './bikes-half-details';
 import { BikesSpeedComponent } from './bikes-speed/bikes-speed.component';
 
 @Component({
@@ -11,7 +12,7 @@ import { BikesSpeedComponent } from './bikes-speed/bikes-speed.component';
   imports:[BikesSpeedComponent,BikesDetailsComponent,CommonModule]
 })
 export class BikesComponent implements OnInit {
-
+  bikesspeed:BikesHalfDetails[]=BIKESSPEED
   constructor() { }
 
   ngOnInit() {

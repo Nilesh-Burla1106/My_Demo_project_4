@@ -1,4 +1,4 @@
 <div class="container">
-  <app-bikes-speed-limit class="bikes-speed-limit" *ngFor="let BikesHalfDetails of bikesspeed" [bikesHalfDetails]="BikesHalfDetails">
+  <app-bikes-speed-limit class="bikes-speed-limit" *ngFor="let BikesHalfDetails of bikesspeed" [bikesHalfDetails]="BikesHalfDetails" (click)="onselected(BikesHalfDetails)">
   </app-bikes-speed-limit>
 </div>

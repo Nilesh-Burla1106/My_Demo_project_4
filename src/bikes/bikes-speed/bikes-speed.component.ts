@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { bikesinfo } from '../bikes-full-details';
 import { BikesHalfDetails } from '../bikes-half-details';
 import { BikesSpeedLimitComponent } from './bikes-speed-limit/bikes-speed-limit.component';
@@ -12,10 +12,17 @@ import { BikesSpeedLimitComponent } from './bikes-speed-limit/bikes-speed-limit.
 })
 export class BikesSpeedComponent implements OnInit {
   bikesspeed:BikesHalfDetails[]=[];
-  constructor() { }
-
-  ngOnInit() {
-    this.bikesspeed=bikesinfo;
+  @Output()bikesHalfDetailsselected=new EventEmitter<BikesHalfDetails>();
+bikeshalfdetailsselected: any;
+  constructor() { 
+    // this.bikesspeed=BIKESSPEED;
   }
 
+  ngOnInit() {
+   
+    }
+Onselected(bikeshalfdetails:BikesHalfDetails){
+  this.bikeshalfdetailsselected.emit(bikeshalfdetails)
+  console.log(bikeshalfdetails)
+}
 }
